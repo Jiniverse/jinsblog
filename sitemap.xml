@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://jiniverse.github.io/jinsblog/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://jiniverse.github.io/jinsblog/example/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://jiniverse.github.io/jinsblog/jupyter/2020/02/20/test.html</loc>
+<loc>https://jiniverse.github.io/jinsblog/example/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://jiniverse.github.io/jinsblog/markdown/server/2021/11/24/slurm-jupyter.html</loc>
+<loc>https://jiniverse.github.io/jinsblog/server/2021/11/24/slurm-jupyter.html</loc>
 <lastmod>2021-11-24T00:00:00-06:00</lastmod>
 </url>
 <url>

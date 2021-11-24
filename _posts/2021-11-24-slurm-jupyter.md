@@ -21,16 +21,16 @@ Host example
 ```shell
 ssh example -L 8000:127.0.0.1:8890
 ```
-其中 `8000`对应的是本地端口，`8890`是远程端口，在登录节点上运行
+其中 `8000` 对应的是本地端口，`8890` 是远程端口，在登录节点上运行
 ```shell
 jupyter-notebook --no-browser --port=8890
 ```
-注意端口要与ssh连接的端口保持一致。最后在本地浏览器里访问`127.0.0.1:8000`即可打开登录节点运行的 jupyter notebook.
+注意端口要与ssh连接的端口保持一致。最后在本地浏览器里访问 `127.0.0.1:8000` 即可打开登录节点运行的 jupyter notebook.
 
 {% include alert.html text="在登录节点跑 jupyter 一定程度上能节省计算资源，但仅适用于内存占用较少的程序，数据量比较大的时候应该用远程节点跑" %}
 
 ## 用远程节点跑 jupyter notebook
-在远程服务器创建如下脚本（假设命名为`jupyter.job`）
+在远程服务器创建如下脚本（假设命名为 `jupyter.job` ）
 ```shell
 #!/bin/bash
 #SBATCH --nodes 1
@@ -64,4 +64,4 @@ echo -e "
 # DO USE TOKEN BELOW
 jupyter-notebook --no-browser --port=${port} --ip=${node}
 ```
-将其中的`/path/to/logfile/`替换为你想要的路径。用`sbatch jupyter.job`提交任务，而后在输出文件`jupyter-output.log`中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问`127.0.0.1:${port}`，其中`${port}`是输出文件中相应的端口号，大功告成！
+将其中的 `/path/to/logfile/` 替换为你想要的路径。用 `sbatch jupyter.job` 提交任务，而后在输出文件 `jupyter-output.log` 中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问 `127.0.0.1:${port}`，其中 `${port}` 是输出文件中相应的端口号，大功告成！

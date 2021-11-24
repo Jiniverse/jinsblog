@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>用python画动画 | JinsBlog</title>
+<title>用 python 画动画 | JinsBlog</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="用python画动画" />
+<meta property="og:title" content="用 python 画动画" />
 <meta name="author" content="Shan Jin" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="总结一下python画动画的方法" />
-<meta property="og:description" content="总结一下python画动画的方法" />
+<meta name="description" content="总结一下 python 画动画的方法" />
+<meta property="og:description" content="总结一下 python 画动画的方法" />
 <link rel="canonical" href="https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html" />
 <meta property="og:url" content="https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html" />
 <meta property="og:site_name" content="JinsBlog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-24T00:00:00-06:00" />
 <script type="application/ld+json">
-{"datePublished":"2021-11-24T00:00:00-06:00","url":"https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html","@type":"BlogPosting","headline":"用python画动画","dateModified":"2021-11-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html"},"author":{"@type":"Person","name":"Shan Jin"},"description":"总结一下python画动画的方法","@context":"https://schema.org"}</script>
+{"datePublished":"2021-11-24T00:00:00-06:00","url":"https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html","@type":"BlogPosting","headline":"用 python 画动画","dateModified":"2021-11-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiniverse.github.io/jinsblog/python/2021/11/24/animation-summary.html"},"author":{"@type":"Person","name":"Shan Jin"},"description":"总结一下 python 画动画的方法","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/jinsblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jiniverse.github.io/jinsblog/feed.xml" title="JinsBlog" /><link rel="shortcut icon" type="image/x-icon" href="/jinsblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">用python画动画</h1><p class="page-description">总结一下python画动画的方法</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-24T00:00:00-06:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">用 python 画动画</h1><p class="page-description">总结一下 python 画动画的方法</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-24T00:00:00-06:00" itemprop="datePublished">
         Nov 24, 2021
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -124,6 +124,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#简单示例">简单示例 </a></li>
 <li class="toc-entry toc-h2"><a href="#关于储存">关于储存 </a></li>
+<li class="toc-entry toc-h2"><a href="#pcolormesh-动画">pcolormesh 动画 </a></li>
 <li class="toc-entry toc-h2"><a href="#画动画的一般方法">画动画的一般方法 </a></li>
 </ul>
 </li>
@@ -143,7 +144,7 @@ window.onload = wrap_img;
 <h1 id="在-jupyter-notebook-中展现动画">
 <a class="anchor" href="#%E5%9C%A8-jupyter-notebook-%E4%B8%AD%E5%B1%95%E7%8E%B0%E5%8A%A8%E7%94%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>在 jupyter notebook 中展现动画<a class="anchor-link" href="#%E5%9C%A8-jupyter-notebook-%E4%B8%AD%E5%B1%95%E7%8E%B0%E5%8A%A8%E7%94%BB"> </a>
 </h1>
-<p>首先为了在jupyter notebook中展现动画，要先载入交互式绘图：</p>
+<p>首先为了在 jupyter notebook 中展现动画，要先载入交互式绘图：</p>
 
 </div>
 </div>
@@ -176,7 +177,7 @@ window.onload = wrap_img;
 <h2 id="简单示例">
 <a class="anchor" href="#%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>简单示例<a class="anchor-link" href="#%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"> </a>
 </h2>
-<p>利用<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.FuncAnimation.html">FuncAnimation</a>可以实现python动画，下面是一个例子：</p>
+<p>利用 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.FuncAnimation.html">FuncAnimation</a> 可以实现 python 动画，下面是一个例子：</p>
 
 </div>
 </div>
@@ -232,13 +233,16 @@ window.onload = wrap_img;
 <h2 id="关于储存">
 <a class="anchor" href="#%E5%85%B3%E4%BA%8E%E5%82%A8%E5%AD%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于储存<a class="anchor-link" href="#%E5%85%B3%E4%BA%8E%E5%82%A8%E5%AD%98"> </a>
 </h2>
-<p><code>FuncAnimation</code> 对象可以直接存为 <code>.mp4</code> 格式的文件，例如上述示例中用 <code>ani.save('ani.mp4',fps=100)</code> 进行储存。由于 <code>matplotlib</code> 本身不支持<code>.gif</code>格式的储存，若要保存为<code>.gif</code>格式文件，必须安装外部软件来实现，比如 <code>imagemagick</code>. 在正确安装 <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> 之后，可用它来实现 <code>.gif</code> 格式的存储，例如上述示例中，储存语句为 <code>ani.save('ani.gif', writer='imagemagick', fps=100)</code>.
+<p><code>FuncAnimation</code> 返回对象可以直接存为 <code>.mp4</code> 格式的文件，例如上述示例中用 <code>ani.save('ani.mp4',fps=100)</code> 进行储存。由于 <code>matplotlib</code> 本身不支持 <code>.gif</code> 格式的储存，若要保存为 <code>.gif</code> 格式文件，必须安装外部软件来实现，比如 <code>imagemagick</code>. 在正确安装 <a href="https://www.imagemagick.org/script/index.php">ImageMagick</a> 之后，可用它来实现 <code>.gif</code> 格式的存储，例如上述示例中，储存语句为 <code>ani.save('ani.gif', writer='imagemagick', fps=100)</code>.
 </p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
     <strong>Note: </strong>用 <code>plot</code> 函数作图时，用 <code>set_data</code> 更新数据；对于 <code>imshow</code> 或 <code>pcolormesh</code> 作图则用 <code>set_array</code> 来更新数据。
-</div>## pcolormesh 动画
-下面是一个简单的 <code>pcolormesh</code> 动画
+</div>
+<h2 id="pcolormesh-动画">
+<a class="anchor" href="#pcolormesh-%E5%8A%A8%E7%94%BB" aria-hidden="true"><span class="octicon octicon-link"></span></a>pcolormesh 动画<a class="anchor-link" href="#pcolormesh-%E5%8A%A8%E7%94%BB"> </a>
+</h2>
+<p>下面是一个简单的 <code>pcolormesh</code> 动画</p>
 
 </div>
 </div>
@@ -283,7 +287,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>注意：<code>shading='gouraud'</code>必须要加上，否则会报错:</p>
+<p>注意：<code>shading='gouraud'</code> 必须要加上，否则会报错:</p>
 
 <pre><code>ValueError: total size of new array must be unchanged</code></pre>
 <h2 id="画动画的一般方法">

@@ -45,24 +45,16 @@ XDG_RUNTIME_DIR=""
 port=$(shuf -i8000-9999 -n1)
 node=$(hostname -s)
 user=$(whoami)
-cluster=$(hostname -f | awk -F"." '{print $2}')
 
 # print tunneling instructions jupyter-log
 echo -e "
    MacOS or linux terminal command to create your ssh tunnel
-   ssh ${cluster} -N -L ${port}:${node}:${port} 
+   ssh example -N -L ${port}:${node}:${port} 
 
    Use a Browser on your local machine to go to:
    localhost:${port}  (prefix w/ https:// if using password)
    "
 
-# load modules or conda environments here
-# uncomment the following two lines to use your conda environment called notebook_env
-# module load miniconda
-# source activate notebook_env
-
-# DON'T USE ADDRESS BELOW.
-# DO USE TOKEN BELOW
 jupyter-notebook --no-browser --port=${port} --ip=${node}
 ```
-将其中的 `/path/to/logfile/` 替换为你想要的路径。用 `sbatch jupyter.job` 提交任务，而后在输出文件 `jupyter-output.log` 中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问 `127.0.0.1:${port}`，其中 `${port}` 是输出文件中相应的端口号，大功告成！
+将其中的 `/path/to/logfile/` 替换为你想要的路径，将 'example' 改为你定义的 Host. 用 `sbatch jupyter.job` 提交任务，而后在输出文件 `jupyter-output.log` 中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问 `127.0.0.1:${port}`，其中 `${port}` 是输出文件中相应的端口号，大功告成！

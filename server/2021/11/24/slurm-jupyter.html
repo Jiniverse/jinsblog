@@ -142,27 +142,19 @@ window.onload = wrap_img;
 <span class="nv">port</span><span class="o">=</span><span class="si">$(</span><span class="nb">shuf</span> <span class="nt">-i8000-9999</span> <span class="nt">-n1</span><span class="si">)</span>
 <span class="nv">node</span><span class="o">=</span><span class="si">$(</span><span class="nb">hostname</span> <span class="nt">-s</span><span class="si">)</span>
 <span class="nv">user</span><span class="o">=</span><span class="si">$(</span><span class="nb">whoami</span><span class="si">)</span>
-<span class="nv">cluster</span><span class="o">=</span><span class="si">$(</span><span class="nb">hostname</span> <span class="nt">-f</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s2">"."</span> <span class="s1">'{print $2}'</span><span class="si">)</span>
 
 <span class="c"># print tunneling instructions jupyter-log</span>
 <span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"
    MacOS or linux terminal command to create your ssh tunnel
-   ssh </span><span class="k">${</span><span class="nv">cluster</span><span class="k">}</span><span class="s2"> -N -L </span><span class="k">${</span><span class="nv">port</span><span class="k">}</span><span class="s2">:</span><span class="k">${</span><span class="nv">node</span><span class="k">}</span><span class="s2">:</span><span class="k">${</span><span class="nv">port</span><span class="k">}</span><span class="s2"> 
+   ssh example -N -L </span><span class="k">${</span><span class="nv">port</span><span class="k">}</span><span class="s2">:</span><span class="k">${</span><span class="nv">node</span><span class="k">}</span><span class="s2">:</span><span class="k">${</span><span class="nv">port</span><span class="k">}</span><span class="s2"> 
 
    Use a Browser on your local machine to go to:
    localhost:</span><span class="k">${</span><span class="nv">port</span><span class="k">}</span><span class="s2">  (prefix w/ https:// if using password)
    "</span>
 
-<span class="c"># load modules or conda environments here</span>
-<span class="c"># uncomment the following two lines to use your conda environment called notebook_env</span>
-<span class="c"># module load miniconda</span>
-<span class="c"># source activate notebook_env</span>
-
-<span class="c"># DON'T USE ADDRESS BELOW.</span>
-<span class="c"># DO USE TOKEN BELOW</span>
 jupyter-notebook <span class="nt">--no-browser</span> <span class="nt">--port</span><span class="o">=</span><span class="k">${</span><span class="nv">port</span><span class="k">}</span> <span class="nt">--ip</span><span class="o">=</span><span class="k">${</span><span class="nv">node</span><span class="k">}</span>
 </code></pre></div></div>
-<p>将其中的 <code class="language-plaintext highlighter-rouge">/path/to/logfile/</code> 替换为你想要的路径。用 <code class="language-plaintext highlighter-rouge">sbatch jupyter.job</code> 提交任务，而后在输出文件 <code class="language-plaintext highlighter-rouge">jupyter-output.log</code> 中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问 <code class="language-plaintext highlighter-rouge">127.0.0.1:${port}</code>，其中 <code class="language-plaintext highlighter-rouge">${port}</code> 是输出文件中相应的端口号，大功告成！</p>
+<p>将其中的 <code class="language-plaintext highlighter-rouge">/path/to/logfile/</code> 替换为你想要的路径，将 ‘example’ 改为你定义的 Host. 用 <code class="language-plaintext highlighter-rouge">sbatch jupyter.job</code> 提交任务，而后在输出文件 <code class="language-plaintext highlighter-rouge">jupyter-output.log</code> 中复制ssh的连接信息，在本地终端中运行。最后在本地浏览器中访问 <code class="language-plaintext highlighter-rouge">127.0.0.1:${port}</code>，其中 <code class="language-plaintext highlighter-rouge">${port}</code> 是输出文件中相应的端口号，大功告成！</p>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
